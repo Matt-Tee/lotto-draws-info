@@ -34,7 +34,7 @@ const DrawScreen = ({ route }: any) => {
           Date of Draw:{' '}
           {moment(draw.DrawDate)
             .add(10, 'hours')
-            .format('dddd [the] Do [of] MMMM YYYY [AEST]')}
+            .format('dddd [the] Do [of] MMMM YYYY')}
         </Text>
         <Padder />
 

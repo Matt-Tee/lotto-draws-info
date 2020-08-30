@@ -53,7 +53,7 @@ const DrawScreen = ({ route }: any) => {
               }).format(draw.Div1Amount)}
             </Text>
             {!!draw.IsDiv1Estimated && (
-              <Text>This ammount is an estimate. Final value may differ.</Text>
+              <Text>This amount is an estimate. Final value may differ.</Text>
             )}
           </View>
         )}

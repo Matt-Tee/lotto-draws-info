@@ -1,6 +1,6 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import Results from '../screens/Results'
+import ScanScreen from '../screens/ScanScreen'
 import Calendar from '../assets/svgs/calendar.svg'
 import { activeColor } from '../constants'
 import UpComing from '../screens/UpComing'
@@ -20,7 +20,7 @@ const BottomTabNavigator = () => {
         name='UpComing'
         component={UpComing}
         options={{
-          tabBarLabel: 'Home',
+          tabBarLabel: 'Open Draws',
           tabBarIcon: ({ color, size }) => (
             <Calendar color={color} scale={size} />
           ),
@@ -28,7 +28,7 @@ const BottomTabNavigator = () => {
       />
       <Tabs.Screen
         name='QRScan'
-        component={Results}
+        component={ScanScreen}
         options={{
           tabBarLabel: 'QR Scan',
           tabBarIcon: ({ color, size }) => (

@@ -68,7 +68,9 @@ const DrawScreen = ({ route }: any) => {
         <Padder />
 
         <View style={{ alignItems: 'center' }}>
-          <View style={{ height: 100 }}>{Icons(draw.ProductId)}</View>
+          <View style={{ height: 100 }}>
+            <Icons id={draw.ProductId} />
+          </View>
         </View>
       </View>
     </Container>

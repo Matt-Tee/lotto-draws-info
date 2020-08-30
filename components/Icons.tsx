@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import { Image } from 'react-native'
 
 const iconMap: { [key: string]: any } = {
@@ -7,7 +7,11 @@ const iconMap: { [key: string]: any } = {
   Powerball: require('../assets/powerBall.png'),
 }
 
-const Icons = (id: string) => {
+type IconProps = {
+  id: string
+}
+
+const Icons: FunctionComponent<IconProps> = ({ id }) => {
   return <Image style={{ flex: 1 }} resizeMode='contain' source={iconMap[id]} />
 }
 

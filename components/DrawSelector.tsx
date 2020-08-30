@@ -35,7 +35,7 @@ const DrawSelector: FunctionComponent<selectorProps> = ({ draw }) => {
         alignItems: 'center',
       }}
     >
-      {Icons(draw.ProductId)}
+      <Icons id={draw.ProductId} />
     </TouchableOpacity>
   )
 }

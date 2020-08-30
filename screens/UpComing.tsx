@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, FunctionComponent } from 'react'
 import Container from '../components/Container'
 import Row from '../components/Row'
 import axios, { AxiosResponse } from 'axios'
@@ -6,7 +6,7 @@ import { draw } from '../types/drawTypes'
 import Loader from '../components/Loader'
 import DrawSelector from '../components/DrawSelector'
 
-export default function Home() {
+const UpComing: FunctionComponent = () => {
   const [loading, setLoading] = useState<boolean>(true)
   const [draws, setDraws] = useState<draw[]>([])
 
@@ -32,7 +32,7 @@ export default function Home() {
   }, [])
 
   if (loading) {
-    return Loader
+    return <Loader />
   }
 
   return (
@@ -45,3 +45,5 @@ export default function Home() {
     </Container>
   )
 }
+
+export default UpComing

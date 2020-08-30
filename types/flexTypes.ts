@@ -1,10 +1,10 @@
 export enum FlexJustifyType {
-  flexStart = 'flex-start',
-  flexEnd = 'flex-end',
-  center = 'center',
-  spaceBetween = 'space-between',
-  spaceAround = 'space-around',
-  spaceEvenly = 'space-evenly',
+  'flex-start' = 'flex-start',
+  'flex-end' = 'flex-end',
+  'center' = 'center',
+  'space-between' = 'space-between',
+  'space-around' = 'space-around',
+  'space-evenly' = 'space-evenly',
 }
 
 export enum FlexWrapType {

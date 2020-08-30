@@ -11,9 +11,10 @@ const ScanScreen: FunctionComponent = () => {
   const [scanned, setScanned] = useState<boolean>(false)
   const navigation = useNavigation()
 
-  const handleScan = (type: string, data: string) => {
+  const handleScan = async (type: string, data: string) => {
     setScanned(true)
-    const response = getData(data)
+    const response = await getData(data)
+    setScanned(false)
   }
 
   const getData = (value: string) => {

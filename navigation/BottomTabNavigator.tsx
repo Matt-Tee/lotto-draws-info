@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import Results from '../screens/Results'
 import HomeIcon from '../assets/svgs/home.svg'
 import Home from '../screens/Home'
+import { activeColor } from '../constants'
 
 
 const Tabs = createBottomTabNavigator()
@@ -15,7 +16,7 @@ const BottomTabNavigator = ()=> {
             <Tabs.Navigator 
                 initialRouteName="Home"
                 tabBarOptions={{
-                    activeTintColor: '#db9e00'
+                    activeTintColor: activeColor
                 }}
             >
                 <Tabs.Screen name="Home" component={Home} 

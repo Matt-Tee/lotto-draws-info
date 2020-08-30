@@ -1,35 +1,38 @@
 import React, { FunctionComponent } from 'react'
 import { View, FlexAlignType } from 'react-native'
-
-enum FlexJustifyType{
-    "flex-start" = "flex-start",
-    "flex-end" = "flex-end",
-    "center"= "center",
-    "space-between" = "space-between",
-    "space-around" = "space-around",
-    "space-evenly" = "space-evenly"
-} 
+import { FlexJustifyType, FlexWrapType } from '../types/flexTypes'
 
 type RowProps = {
-    ph?: number,
-    pv?: number,
-    jc?: FlexJustifyType,
-    ai?: FlexAlignType,
+  ph?: number
+  pv?: number
+  jc?: string
+  ai?: FlexAlignType
+  wrap?: string
 }
 
-const Row: FunctionComponent<RowProps> = ({ph, pv, jc, ai, children}) => {
-    return (
-        <View style={{
-            flex: 1,
-            flexDirection: 'row',
-            paddingHorizontal: ph || 0,
-            paddingVertical: pv || 0,
-            justifyContent: jc || "flex-start",
-            alignItems: ai || "flex-start"
-        }}>
-            {children}
-        </View>
-    )
+const Row: FunctionComponent<RowProps> = ({
+  ph,
+  pv,
+  jc,
+  ai,
+  wrap,
+  children,
+}) => {
+  return (
+    <View
+      style={{
+        flex: 1,
+        flexDirection: 'row',
+        paddingHorizontal: ph || 0,
+        paddingVertical: pv || 0,
+        justifyContent: (jc as FlexJustifyType) || 'flex-start',
+        alignItems: ai || 'flex-start',
+        flexWrap: (wrap as FlexWrapType) || 'wrap',
+      }}
+    >
+      {children}
+    </View>
+  )
 }
 
 export default Row

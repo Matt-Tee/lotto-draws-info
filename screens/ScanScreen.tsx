@@ -16,14 +16,14 @@ const ScanScreen: FunctionComponent = () => {
     const response = getData(data)
   }
 
-  const getData = (param: string) => {
+  const getData = (value: string) => {
     axios
       .post(
         'https://data.api.thelott.com/sales/vmax/web/data/lotto/opendraws',
         {
           CompanyId: 'GoldenCasket',
           MaxDrawCount: 1,
-          OptionalProductFilter: [param],
+          OptionalProductFilter: [value],
         }
       )
       .then((response: AxiosResponse) => {

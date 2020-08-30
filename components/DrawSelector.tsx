@@ -3,6 +3,7 @@ import { Dimensions, Image } from 'react-native'
 import { draw } from '../types/drawTypes'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import { useNavigation } from '@react-navigation/native'
+import Icons from './Icons'
 
 type selectorProps = {
   draw: draw
@@ -17,16 +18,25 @@ const DrawSelector: FunctionComponent<selectorProps> = ({ draw }) => {
     navigation.navigate('Draw Details', { draw: draw })
   }
 
+  console.log(draw.ProductId)
+
   return (
     <TouchableOpacity
       onPress={() => {
         handleSelect()
       }}
       style={{
-        width,
+        width: width / 1.5,
         height: 200,
+        borderRadius: 10,
+        margin: 7,
+        backgroundColor: '#eee',
+        justifyContent: 'center',
+        alignItems: 'center',
       }}
-    ></TouchableOpacity>
+    >
+      {Icons(draw.ProductId)}
+    </TouchableOpacity>
   )
 }
 

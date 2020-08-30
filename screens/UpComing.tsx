@@ -5,6 +5,7 @@ import axios, { AxiosResponse } from 'axios'
 import { draw } from '../types/drawTypes'
 import Loader from '../components/Loader'
 import DrawSelector from '../components/DrawSelector'
+import { ScrollView } from 'react-native-gesture-handler'
 
 const UpComing: FunctionComponent = () => {
   const [loading, setLoading] = useState<boolean>(true)
@@ -37,11 +38,11 @@ const UpComing: FunctionComponent = () => {
 
   return (
     <Container>
-      <Row wrap='wrap'>
+      <ScrollView contentContainerStyle={{ alignItems: 'center' }}>
         {draws.map((draw, index) => {
           return <DrawSelector key={index} draw={draw} />
         })}
-      </Row>
+      </ScrollView>
     </Container>
   )
 }

@@ -1,6 +1,5 @@
 import React, { useState, useEffect, FunctionComponent } from 'react'
 import Container from '../components/Container'
-import Row from '../components/Row'
 import axios, { AxiosResponse } from 'axios'
 import { draw } from '../types/drawTypes'
 import Loader from '../components/Loader'

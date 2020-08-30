@@ -26,13 +26,13 @@ To run this app locally just clone down the repository and run the following cod
     yarn
     yarn start
 
-Alternatively if you just want to have a look at the app but don't want to run it locally you can find it at .
+Alternatively if you just want to have a look at the app but don't want to run it locally you can find it at https://expo.io/@matt-tee/lotto-draws-info.
 
 Either way, you are going to need the Expo App to scan the QR Code that is now in front of you. Just download it to your phone from either the Google-play or Apple stores, it's free! Once you have just scan the QR Code and it will do the rest for you.
 
 ### Unit Tests
 
-I only included the minimum two unit test required due to time constraints. I probably would have done some test driven development except that I couldn't make up my mind how the end result should function. It was only about three quarters of the way through that I actually finalized the general layout/functionality. Additionally, I find front-end unit tests to generally be a waste of time when you are using typescript. Unless you have some particularly complex logic on the front-end (in which case you are developing your product wrong) or intend to reuse a particular component to death, there isn't a whole lot of point.
+I only included the minimum two unit test required due to time constraints. I probably would have done some test driven development except that I couldn't make up my mind how the end result should function. It was only about three quarters of the way through that I actually finalized the general layout/functionality. Since I used typescript with this project and it was a very simple project, I would consider tests to almost be pointless in this case.
 
 ### Logos
 

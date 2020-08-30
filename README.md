@@ -45,8 +45,8 @@ The app has a QRCode scanner built into it. With the limited functionality that 
 
 ##### Powerball
 
-    ![Powerball QRCode](./assets/powerBallQR.jpg)
+![Powerball QRCode](./assets/powerBallQR.jpg)
 
 ##### OzLotto
 
-    ![OzLotto QRCode](./assets/ozLottoQR.jpg)
+![OzLotto QRCode](./assets/ozLottoQR.jpg)
